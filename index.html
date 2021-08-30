@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算機</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://kit.fontawesome.com/4dd5ab9111.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bg-black">
+        <div class="main">
+            <img src="img/BMICLogo.png" alt="" class="icon">
+            <div class="inputs">
+                <label for="height"><p>身高 cm<span>(取至小數點第一位)</span></p><input type="number" id="height" min="50" max="250" step="0.1" placeholder="請輸入身高"><p class="heightCheck"></p></label>
+                <label for="weight"><p>體重 kg<span>(取至小數點第一位)</span></p><input type="number" id="weight" min="20" max="250" step="0.1" placeholder="請輸入體重"><p class="weightCheck"></p></label>
+            </div>
+            <div class="run"></div>
+            <div class="result d-none">
+                <p class="BMI"></p>
+                <p class="bmi-text">BMI</p>
+                <div class="reset-btn"><i class="fas fa-sync-alt"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="history">
+        <h1>BMI紀錄</h1>
+        <ul class="list">
+            <li class="card normalCard">
+                <div>理想</div>
+                <div><span>BMI</span>20.90</div>
+                <div><span>weight</span>70.1kg</div>
+                <div><span>height</span>96cm</div>
+                <div class="cardFoot"><span>08-22-2021</span><i class="fas fa-trash-alt"></i></div>
+            </li>
+            <a href="#" class="deleteAll"><i class="far fa-times-circle"></i>清除全部紀錄</a>
+        </ul>
+    </div>
+    <div class="footer">
+        <img src="img/BMICLogo-B.png" alt="">
+    </div>
+    <script src="all.js"></script>
+</body>
+</html>
