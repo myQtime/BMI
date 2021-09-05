@@ -157,4 +157,13 @@ list.addEventListener('click',function(e){
     }
 })
 
+
+//enter 輸入
+document.addEventListener("keyup",function(e){
+    console.log(e);
+    if (e.key ==="Enter"){
+        run.click()
+    }
+})
+
 init();
