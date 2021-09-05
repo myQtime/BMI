@@ -67,7 +67,6 @@ img {
 
 .bg-black {
   background: #424242;
-  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,22 +87,47 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 70%;
   max-width: 768px;
+  padding: 40px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .main {
+    padding: 20px;
+  }
 }
 
 .main img {
   height: 117px;
+  margin: 8px;
+}
+
+@media (max-width: 576px) {
+  .main img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 .inputs {
   color: #FFD366;
   font-size: 18px;
+  padding: 8px;
+}
+
+@media (max-width: 576px) {
+  .inputs {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 .inputs p {
@@ -143,6 +167,7 @@ img {
   text-align: center;
   line-height: 120px;
   font-size: 24px;
+  margin: 8px;
   -webkit-transition-duration: 2000ms;
           transition-duration: 2000ms;
 }
@@ -173,6 +198,7 @@ img {
   text-align: center;
   font-size: 24px;
   position: relative;
+  margin: 8px;
 }
 
 .result::before {
@@ -337,26 +363,36 @@ img {
 }
 
 .list {
-  width: 50%;
+  width: 70%;
   max-width: 768px;
   margin: 0 auto;
 }
 
+@media (max-width: 576px) {
+  .list {
+    width: 85%;
+  }
+}
+
 .card {
-  padding: 20px;
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 20px;
+  font-size: 1.25rem;
   background: #ffffff;
   margin-bottom: 16px;
 }
 
 .card div {
   width: 18%;
+  display: inline-block;
+  margin: 4px;
   font-weight: bold;
 }
 
@@ -366,7 +402,17 @@ img {
   margin-right: 8px;
 }
 
+.card .statu {
+  width: 18%;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
 .card .cardFoot {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   text-align: right;
 }
 
@@ -379,6 +425,47 @@ img {
           transform: scale(1.3);
   color: black;
   cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .card .statu {
+    width: 40%;
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .card .div-b {
+    width: 20%;
+  }
+  .card .div-w {
+    text-align: center;
+    width: 30%;
+  }
+  .card .div-h {
+    text-align: right;
+    width: 30%;
+  }
+  .card .cardFoot {
+    width: 45%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    text-align: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .card .div-b {
+    width: 51%;
+  }
+  .card .div-w {
+    text-align: left;
+    width: 51%;
+  }
+  .card .div-h {
+    text-align: left;
+    width: 51%;
+  }
 }
 
 .underweightCard {

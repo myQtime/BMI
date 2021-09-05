@@ -1,6 +1,5 @@
 .bg-black{
     background: $bgcolor;
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,20 +12,36 @@
 .main{
     margin:auto;
     display: flex;
-    width: 50%;
+    width: 70%;
     max-width: 768px;
+    padding: 40px; 
+    @media (max-width: 576px){
+        padding: 20px;;
+    }
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+
+    
     img{
         height: 117px;
+        margin: 8px;
+        @media (max-width: 576px){
+            transform: scale(0.8);
+        }
     }
 }
 
 .inputs{
     color:$maincolor;
     font-size: 18px;
+    padding: 8px;
+    @media (max-width: 576px){
+        transform: scale(0.8);
+    }
     p{
         margin-bottom: 2px;
+        
     }
     span{
         font-size: 12px;
@@ -63,7 +78,9 @@
     text-align: center;
     line-height: 120px;
     font-size: 24px;
+    margin: 8px;
     transition-duration:2000ms;
+    
     &::before{
         content: "看結果";
 
@@ -87,6 +104,7 @@
     text-align: center;
     font-size: 24px;
     position: relative;
+    margin: 8px;
     &::before{
         width: 100%;
         text-align: left;
@@ -216,20 +234,26 @@
     }
 }
 .list{
-    width: 50%;
+    width: 70%;
     max-width: 768px;
     margin: 0 auto;
+    @media (max-width:576px){
+        width: 85%;
+    }
 }
 
 .card{
-    padding: 20px;
+    padding: 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 1.25rem;
     background: #ffffff;
     margin-bottom: 16px;
     div{
         width: 18%;
+        display: inline-block;
+        margin: 4px;
         font-weight: bold;
     }
     span{
@@ -237,7 +261,12 @@
         font-size: 16px;
         margin-right: 8px;
     }
+    .statu{
+        width: 18%;
+        order:0;
+    }
     .cardFoot{
+        order: 1;
         text-align: right;
     }
     .delete{
@@ -246,6 +275,41 @@
             transform: scale(1.3);
             color: black;
             cursor: pointer;
+        }
+    }
+    @media (max-width:992px){
+        .statu{
+            width: 40%;
+            order:-2;
+        }
+        .div-b{
+            width: 20%;
+        }
+        .div-w{
+            text-align: center;
+            width: 30%;
+        }
+        .div-h{
+            text-align: right;
+            width: 30%;
+        }
+        .cardFoot{
+            width: 45%;
+            order: -1;
+            text-align: right;
+        }
+    }
+    @media (max-width:576px){
+        .div-b{
+            width: 51%;
+        }
+        .div-w{
+            text-align: left;
+            width: 51%;
+        }
+        .div-h{
+            text-align: left;
+            width: 51%;
         }
     }
 }

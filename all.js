@@ -16,10 +16,10 @@ function init(){
     }else if (data.length >= 0){
         let str ="";
         data.forEach(function(item,i){
-            str+= `<li class="card ${data[i].color}"><div>${data[i].statu}</div>
-            <div><span>BMI</span>${data[i].BMI}</div>
-            <div><span>weight</span>${data[i].weight}kg</div>
-            <div><span>height</span>${data[i].height}cm</div>
+            str+= `<li class="card ${data[i].color}"><div class="statu">${data[i].statu}</div>
+            <div class="div-b"><span>BMI</span>${data[i].BMI}</div>
+            <div class="div-w"><span>weight</span>${data[i].weight}kg</div>
+            <div class="div-h"><span>height</span>${data[i].height}cm</div>
             <div class="cardFoot"><span>${data[i].date}</span><i class="fas fa-trash-alt delete" data-num=${i} title="刪除此筆資料"></i></div>
         </li>`
         })
@@ -124,6 +124,9 @@ function getToday(){
     let yyyy = now.getFullYear();
     let MM = now.getMonth()+1;
     let dd = now.getDate();
+    if(dd < 10){
+        dd = "0"+ dd;
+    }
     date = `${MM}-${dd}-${yyyy}`
     return date;
 }
